@@ -1,0 +1,35 @@
+@import "imports/reset";
+@import "imports/normalize";
+@import "imports/mixins" ;
+@import "imports/media-queries" ;
+@import "imports/colors" ;
+
+html {
+	.box-sizing();
+}
+*, *:before, *:after {
+	.box-sizing();
+}
+
+html{
+	width:100%;
+	height:100%;
+}
+
+body {
+	margin: 0 auto;
+	width:100%;
+	height:100%;
+	@media @laptop{
+		background-color:@clr-rain;
+	}
+	@media @tablet{
+		background-color:@clr-thunder;
+	}
+	@media @mobile{
+		background-color:@clr-snow;
+	}
+}
+
+@import "template/calendar";
+@import "template/cron";

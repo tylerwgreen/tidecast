@@ -1,0 +1,4 @@
+*.config
+/data/*.json
+.htaccess
+error.log
