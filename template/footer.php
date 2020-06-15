@@ -15,6 +15,6 @@
 		<script>less.watch();</script>
 	<?php endif; ?>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="<?= URL_JS; ?>script.js"></script>
+	<script src="<?= URL_JS; ?>script.js?<?= APP_VER; ?>"></script>
 </body>
 </html>

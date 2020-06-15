@@ -503,19 +503,7 @@ div#calendar {
   height: 100%;
   font-family: Helvetica, "Times New Roman", Times, serif;
   text-align: center;
-  font-size: 30px;
-}
-@media only screen and (min-width: 769px) and (max-width: 1440px) {
-  /* line 7, http://tidecast.local/less/template/calendar.less */
-  div#calendar {
-    font-size: 20px;
-  }
-}
-@media only screen and (min-width: 426px) and (max-width: 768px) {
-  /* line 10, http://tidecast.local/less/template/calendar.less */
-  div#calendar {
-    font-size: 15px;
-  }
+  font-size: 18px;
 }
 @media only screen and (min-width: 300px) and (max-width: 425px) {
   /* line 13, http://tidecast.local/less/template/calendar.less */
@@ -705,68 +693,96 @@ div#calendar ul.dates li div.region-tide-data h3 {
 }
 /* line 179, http://tidecast.local/less/template/calendar.less */
 div#calendar ul.dates li div.region-tide-data ul.tide-data {
-  font-size: 0.9em;
+  float: left;
+  width: 100%;
+  display: block;
+  clear: both;
+  font-size: 1em;
 }
-/* line 185, http://tidecast.local/less/template/calendar.less */
+@media only screen and (min-width: 300px) and (max-width: 425px) {
+  /* line 185, http://tidecast.local/less/template/calendar.less */
+  div#calendar ul.dates li div.region-tide-data ul.tide-data {
+    font-size: 0.9em;
+  }
+}
+/* line 188, http://tidecast.local/less/template/calendar.less */
 div#calendar ul.dates li div.region-tide-data ul.tide-data li {
   display: block;
   border: none;
   height: initial;
   width: 100%;
 }
-/* line 191, http://tidecast.local/less/template/calendar.less */
+/* line 194, http://tidecast.local/less/template/calendar.less */
 div#calendar ul.dates li div.region-tide-data ul.tide-data li span {
-  padding: 3.7px 0;
   display: block;
   float: left;
+  padding: 1.6px 0;
 }
-/* line 196, http://tidecast.local/less/template/calendar.less */
+@media only screen and (min-width: 300px) and (max-width: 425px) {
+  /* line 198, http://tidecast.local/less/template/calendar.less */
+  div#calendar ul.dates li div.region-tide-data ul.tide-data li span {
+    padding: 3.7px 0;
+  }
+}
+/* line 202, http://tidecast.local/less/template/calendar.less */
 div#calendar ul.dates li div.region-tide-data ul.tide-data li span.time {
-  width: 55%;
   text-align: right;
-  padding-right: 1px;
+  width: 55%;
+  padding-right: 5px;
 }
-/* line 201, http://tidecast.local/less/template/calendar.less */
+@media only screen and (min-width: 300px) and (max-width: 425px) {
+  /* line 206, http://tidecast.local/less/template/calendar.less */
+  div#calendar ul.dates li div.region-tide-data ul.tide-data li span.time {
+    padding-right: 1px;
+  }
+}
+/* line 210, http://tidecast.local/less/template/calendar.less */
 div#calendar ul.dates li div.region-tide-data ul.tide-data li span.value {
-  width: 31%;
   text-align: left;
-  padding-left: 1px;
+  width: 31%;
+  padding-left: 5px;
 }
-/* line 209, http://tidecast.local/less/template/calendar.less */
+@media only screen and (min-width: 300px) and (max-width: 425px) {
+  /* line 214, http://tidecast.local/less/template/calendar.less */
+  div#calendar ul.dates li div.region-tide-data ul.tide-data li span.value {
+    padding-left: 1px;
+  }
+}
+/* line 221, http://tidecast.local/less/template/calendar.less */
 div#calendar ul.dates li div.region-tide-data ul.tide-data li span.tide-indicator {
   width: 14%;
   text-align: center;
 }
-/* line 218, http://tidecast.local/less/template/calendar.less */
+/* line 230, http://tidecast.local/less/template/calendar.less */
 div#calendar ul.dates li div.region-tide-data ul.tide-data li span.sunrise-event-best,
 div#calendar ul.dates li div.region-tide-data ul.tide-data li span.sunset-event-best,
 div#calendar ul.dates li div.region-tide-data ul.tide-data li span.low-tide-event-best,
 div#calendar ul.dates li div.region-tide-data ul.tide-data li span.high-tide-event-best {
   background-color: hsl(120, 100%, 50%);
 }
-/* line 224, http://tidecast.local/less/template/calendar.less */
+/* line 236, http://tidecast.local/less/template/calendar.less */
 div#calendar ul.dates li div.region-tide-data ul.tide-data li span.sunrise-event-better,
 div#calendar ul.dates li div.region-tide-data ul.tide-data li span.sunset-event-better,
 div#calendar ul.dates li div.region-tide-data ul.tide-data li span.low-tide-event-better,
 div#calendar ul.dates li div.region-tide-data ul.tide-data li span.high-tide-event-better {
   background-color: hsl(60, 100%, 50%);
 }
-/* line 230, http://tidecast.local/less/template/calendar.less */
+/* line 242, http://tidecast.local/less/template/calendar.less */
 div#calendar ul.dates li div.region-tide-data ul.tide-data li span.sunrise-event-good,
 div#calendar ul.dates li div.region-tide-data ul.tide-data li span.sunset-event-good,
 div#calendar ul.dates li div.region-tide-data ul.tide-data li span.low-tide-event-good,
 div#calendar ul.dates li div.region-tide-data ul.tide-data li span.high-tide-event-good {
   background-color: hsl(30, 100%, 50%);
 }
-/* line 236, http://tidecast.local/less/template/calendar.less */
+/* line 248, http://tidecast.local/less/template/calendar.less */
 div#calendar ul.dates li div.region-tide-data ul.tide-data li span.tide-indicator-h {
   background-color: hsl(300, 100%, 50%);
 }
-/* line 239, http://tidecast.local/less/template/calendar.less */
+/* line 251, http://tidecast.local/less/template/calendar.less */
 div#calendar ul.dates li div.region-tide-data ul.tide-data li span.tide-indicator-l {
   background-color: hsl(180, 100%, 50%);
 }
-/* line 243, http://tidecast.local/less/template/calendar.less */
+/* line 255, http://tidecast.local/less/template/calendar.less */
 div#calendar ul.dates li div.region-tide-data ul.tide-data li.sunrise,
 div#calendar ul.dates li div.region-tide-data ul.tide-data li.sunset {
   font-style: italic;

@@ -35,6 +35,7 @@ define('TIDES_CACHE_FILE_BASE',	DIR_DATA . 'tides-');
 define('DEBUG',		false);
 // define('USE_LESS',		true);
 define('USE_LESS',		false);
+define('APP_VER',		'0.2');
 
 // load config
 $config = loadConfig();

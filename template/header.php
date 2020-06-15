@@ -8,5 +8,5 @@
 	<?php if(USE_LESS): ?>
 		<link rel="stylesheet/less" type="text/css" href="<?= URL_LESS; ?>style.less" />
 	<?php else: ?>
-		<link rel="stylesheet" href="<?= URL_CSS; ?>style.css">
+		<link rel="stylesheet" href="<?= URL_CSS; ?>style.css?v=<?= APP_VER; ?>">
 	<?php endif; ?>
