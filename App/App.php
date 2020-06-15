@@ -31,10 +31,10 @@ define('TEMPLATE_FOOTER',	DIR_TEMPLATE	. 'footer.php');
 // files
 define('TIDES_CACHE_FILE_BASE',	DIR_DATA . 'tides-');
 
-define('DEBUG',		true);
-// define('DEBUG',		false);
-define('USE_LESS',		true);
-// define('USE_LESS',		false);
+// define('DEBUG',		true);
+define('DEBUG',		false);
+// define('USE_LESS',		true);
+define('USE_LESS',		false);
 
 // load config
 $config = loadConfig();

@@ -3,30 +3,58 @@ div#calendar{
 	height:100%;
 	font-family:Helvetica, "Times New Roman", Times, serif;
 	text-align:center;
+	font-size:30px;
+	@media @laptop{
+		font-size:20px;
+	}
+	@media @tablet{
+		font-size:15px;
+	}
+	@media @mobile{
+		font-size:10px;
+	}
 	div.header{
 		height:5%;
 		color:@clr-white;
 		background-color:@clr-grey;
 		overflow:hidden;
-		a.prev,
-		a.next{
+		font-size:1em;
+		span.region-selector{
 			display:grid;
 			align-items: center;
 			float:left;
-			width:percentage((1/7)*2);
+			width:percentage((1/7)*4);
 			height:100%;
-			text-decoration:none;
-			color:@clr-white;
-			&:hover{
-				background-color:lighten(@clr-grey, 10%);
+			label{
+				display:none;
+			}
+			select{
+				height:100%;
+				padding:5px;
+				border:none;
 			}
 		}
 		span.title{
 			display:grid;
 			align-items: center;
 			float:left;
-			width:percentage((1/7)*3);
+			width:percentage((1/7)*2);
 			height:100%;
+		}
+		a.prev,
+		a.next{
+			display:grid;
+			align-items: center;
+			float:left;
+			width:percentage((1/7)*.5);
+			height:100%;
+			line-height:100%;
+			text-decoration:none;
+			color:@clr-white;
+			font-size:2em;
+			&:hover{
+				background-color:lighten(@clr-grey, 10%);
+			}
 		}
 	}
 	ul.labels{
@@ -60,13 +88,14 @@ div#calendar{
 		li{
 			list-style-type:none;
 			float:left;
-			height:20%;
+			height:@height;
 			width:percentage(1/7);
 			background-color:@clr-white;
 			color:@clr-black;
 			border:solid 1px @clr-black;
 			border-right:none;
 			border-bottom:none;
+			overflow:hidden;
 			&.start{
 				border-left:none;
 			}
@@ -74,50 +103,118 @@ div#calendar{
 				border-right:none;
 			}
 			h2{
+				font-size:.8em;
 				font-weight:bold;
+				background-color:lighten(@clr-grey, 30%);
+				padding:2px 0;
 				&.today{
-					background-color:lighten(@clr-grey, 35%);
+					background-color:darken(@clr-grey, 30%);
+					color:@clr-white;
 				}
 			}
 			div.region-tide-data{
 				h3{
+display:none !important;
+/*
 					font-weight:bold;
-					/* &.sunrise-event{
-						background-color:@clr-pink;
-					}
-					&.sunset-event{
-						background-color:@clr-purple;
-					}
+					display:block;
+					float:left;
+					width:100%;
+					// &.sunrise-event{
+						// background-color:@clr-pink;
+					// }
+					// &.sunset-event{
+						// background-color:@clr-purple;
+					// }
+					background-color:lighten(@clr-grey, 40%);
 					&.low-tide-event{
-						background-color:@clr-cyan;
+						// background-color:@clr-cyan;
 					}
 					&.high-tide-event{
-						background-color:@clr-foo;
-					} */
+						// background-color:@clr-green;
+					}
+					span{
+						display:block;
+						float:left;
+						padding:2px 0;
+						&.region-name{
+							width:80%;
+							overflow:hidden;
+						}
+						&.tide-indicator-h{
+							width:10%;
+							// background-color:@clr-purple;
+						}
+						&.tide-indicator-l{
+							width:10%;
+							// background-color:@clr-blue;
+						}
+						// &.sunrise-event-best,
+						// &.sunset-event-best,
+						&.low-tide-event-best,
+						&.high-tide-event-best{
+							background-color:@clr-green;
+						}
+						// &.sunrise-event-better,
+						// &.sunset-event-better,
+						&.low-tide-event-better,
+						&.high-tide-event-better{
+							background-color:@clr-yellow;
+						}
+						// &.sunrise-event-good,
+						// &.sunset-event-good,
+						&.low-tide-event-good,
+						&.high-tide-event-good{
+							background-color:@clr-orange;
+						}
+						// &.tide-indicator-h{
+							// background-color:@clr-bright-pink;
+						// }
+						// &.tide-indicator-l{
+							// background-color:@clr-cyan;
+						// }
+					}
+*/
 				}
 				ul.tide-data{
+					// float:left;
+					// width:100%;
+					// display:block;
+					// clear:both;
+					font-size:.9em;
 					li{
+						// background-color:lighten(@clr-grey, 40%);
+						display:block;
 						border:none;
-						float:none;
 						height:initial;
 						width:100%;
-						background-color:initial;
 						span{
-							padding:2px;
-							display:inline-block;
+							padding:3.7px 0;
+							display:block;
+							float:left;
+// overflow:hidden;
 							&.time{
-								width:45%;
+								width:55%;
 								text-align:right;
+								padding-right:1px;
 							}
 							&.value{
-								width:40%;
+								width:31%;
 								text-align:left;
+								padding-left:1px;
 							}
-							&.tide-indicator-h,
-							&.tide-indicator-l{
-								width:10%;
-								text-align:left;
+							&.value-sun{
+								// width:60%;
 							}
+							&.tide-indicator{
+								width:14%;
+								text-align:center;
+							}
+							// &.tide-indicator-h,
+							// &.tide-indicator-l{
+								// width:14%;
+								// text-align:center;
+							// }
 							&.sunrise-event-best,
 							&.sunset-event-best,
 							&.low-tide-event-best,

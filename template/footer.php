@@ -14,6 +14,7 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
 		<script>less.watch();</script>
 	<?php endif; ?>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="<?= URL_JS; ?>script.js"></script>
 </body>
 </html>
