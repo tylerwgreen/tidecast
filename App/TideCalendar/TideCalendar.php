@@ -51,9 +51,9 @@ class TideCalendar {
 		return
 			'<div class="header">' .
 				$this->createRegionSelector($tideData) . 
-				'<span class="title">' . date('M. Y', strtotime($this->currentYear . '-' . $this->currentMonth . '-1')) . '</span>' .
 				'<a class="prev" href="' . $this->naviHref . '?m=' . sprintf('%02d', $preMonth) . '&y=' . $preYear . '">&#171;</a>' .
 				'<a class="next" href="' . $this->naviHref . '?m=' . sprintf("%02d", $nextMonth) . '&y=' . $nextYear . '">&#187;</a>' .
+				'<span class="title">' . date('M. Y', strtotime($this->currentYear . '-' . $this->currentMonth . '-1')) . '</span>' .
 			'</div>';
 	}
 	
