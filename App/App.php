@@ -15,7 +15,7 @@ require(DIR_APP . 'TideCalendar/TideCalendar.php');
 set_error_handler('errorAsExceptionHandler');
 
 // define app vars
-define('DIR_DATA',		DIR_BASE	. 'data/');
+// define('DIR_DATA',		DIR_BASE	. 'data/');
 
 define('URL_BASE',	baseUrl());
 define('URL_IMG',	baseUrl()	. 'img/');
@@ -29,7 +29,7 @@ define('TEMPLATE_HEADER',	DIR_TEMPLATE	. 'header.php');
 define('TEMPLATE_FOOTER',	DIR_TEMPLATE	. 'footer.php');
 
 // files
-define('TIDES_CACHE_FILE_BASE',	DIR_DATA . 'tides-');
+// define('TIDES_CACHE_FILE_BASE',	DIR_DATA . 'tides-');
 
 // define('DEBUG',		true);
 define('DEBUG',		false);

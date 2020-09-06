@@ -3,7 +3,8 @@ class TidesApi {
 
 	private $credentials = null;
 	
-	private $baseUrl = 'https://tidesandcurrents.noaa.gov/api/datagetter';
+	// private $baseUrl = 'https://tidesandcurrents.noaa.gov/api/datagetter';
+	private $baseUrl = 'https://api.tidesandcurrents.noaa.gov/api/prod/datagetter';
 	
 	private $dateFormat = 'Ymd H:i'; // yyyyMMdd HH:mm
 	

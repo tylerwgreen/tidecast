@@ -1,5 +1,5 @@
 <?php
-require(dirname(__FILE__) . '/App/App.php');
+require(dirname(__FILE__) . '/../App/App.php');
 try{
 	$calendar = new TideCalendar($config->tidesAPI, $config->tideStations);
 }catch(Exception $e){
